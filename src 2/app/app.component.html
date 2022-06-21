@@ -1,0 +1,20 @@
+<app-header [bio]="cadgeranInfo"></app-header>
+<!-- [child variable open for passing] = "parent variable"-->
+
+<mat-tab-group mat-stretch-tabs  
+               class="example-stretched-tabs mat-elevation-z4"
+		[ngStyle]="{textAlign: 'center'}">
+
+  <mat-tab label="Setup">
+    <app-setup [bio]="cadgeranInfo"></app-setup>
+  </mat-tab>
+
+  <mat-tab label="Directives">
+    <app-directives [bio]="cadgeranInfo"></app-directives>
+  </mat-tab>
+
+  <mat-tab label="JSON">
+    <app-json></app-json>
+  </mat-tab>
+
+</mat-tab-group>

@@ -1,0 +1,21 @@
+<label>Enter a Student ID</label><br>
+<input [(ngModel)]="idEntered">
+<hr>
+<div *ngIf="idEntered === bio.cadgeranID; else notme">
+  <h4>This is {{bio.cadgeranName}}</h4>
+  <img src="assets/images/me.png" width="100">
+</div>
+
+<ng-template #notme>
+  <h4>This is NOT ME</h4>
+  <img src="assets/images/other.png" width="100">
+</ng-template>
+
+<p [ngClass]="{mine: idEntered === bio.cadgeranID,
+                other: idEntered != bio.cadgeranID}"></p>
+
+<p [innerHTML]="output"></p>
+
+<button mat-raised-button (click)="checkdate()">
+  Click to show final exam date
+</button>

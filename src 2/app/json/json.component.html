@@ -1,0 +1,13 @@
+<h3>
+  {{headerInfo.system}} for {{headerInfo.myName}}
+</h3>
+
+<p *ngFor="let x of schedule">
+  Route: {{x.route}} / Leaves: {{x.leave}} / Arrives: {{x.arrive}}
+</p>
+
+<hr>
+<button mat-raised-button (click)="displayJSON()">
+  Click to display route data
+</button>
+<p [innerHTML] = 'output'></p>
